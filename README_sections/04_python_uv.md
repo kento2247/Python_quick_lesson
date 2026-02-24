@@ -60,10 +60,10 @@ uv --version
 
 ```bash
 uv init
-uv venv --python 3.10
+uv venv --python 3.13
 source .venv/bin/activate
 ```
-- `--python` でPythonのバージョンを指定可能（例: `3.10`）
+- `--python` でPythonのバージョンを指定可能（本教材のサンプルは `>=3.13` を想定）
 
 
 確認:
@@ -85,8 +85,8 @@ python --version
 基本:
 
 ```bash
-uv add numpy 
-uv add pandas 
+uv add numpy
+uv add pandas
 uv add matplotlib
 ```
 または，3つまとめて:
@@ -112,11 +112,30 @@ uv remove numpy
 ```
 
 ### uvの挙動
-- `uv init` でプロジェクトルートに `uv.lock` と `.venv/` が作成される
-- `uv add` で依存関係が `uv.lock` に記録される
-- 仮想環境は `.venv/` に作成され，プロジェクトごとに分離される
+- `uv init` でプロジェクトルートに `pyproject.toml` が作成される
+- `uv venv` で仮想環境 `.venv/` が作成される
+- `uv add` で依存関係が `pyproject.toml` に追加され，`uv.lock` が更新される
 - `uv run` で仮想環境内でコマンドを実行できる．仮想環境が未作成の場合は自動で作成され，依存関係も自動でインストールされる
 - `uv sync` で `pyproject.toml` と `uv.lock` をもとに環境を再現できる
+
+---
+
+## 4-5. `uv run` / `uv sync` の使い分け
+
+最小ルール:
+
+- 自分のPCで「とりあえず実行」: `uv run ...`
+- 既存プロジェクトの依存を先に揃える: `uv sync`
+
+例:
+
+```bash
+# ロックファイルに合わせて環境を再現
+uv sync
+
+# 仮想環境内で実行
+uv run main.py
+```
 
 ---
 
@@ -212,9 +231,10 @@ from typing import Literal
 from tqdm import tqdm
 
 
-def run(mode: Literal["train", "eval"], data_dir: Path) -> None:
-    for _ in tqdm(range(100), desc=f"{mode}"):
+def run(mode: Literal["train", "eval"], data_dir: Path, steps: int) -> None:
+    for _ in tqdm(range(steps), desc=f"{mode}"):
         pass
+    print(f"mode={mode}")
     print(f"data_dir={data_dir.resolve()}")
 
 
@@ -222,8 +242,9 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--mode", choices=["train", "eval"], default="train")
     parser.add_argument("--data-dir", type=Path, default=Path("data"))
+    parser.add_argument("--steps", type=int, default=20)
     args = parser.parse_args()
-    run(args.mode, args.data_dir)
+    run(args.mode, args.data_dir, args.steps)
 ```
 
 同じ内容を `sample_projects/3-recommend` にサンプルとして配置しているので，実際に動かして確認できる:

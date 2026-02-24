@@ -268,22 +268,27 @@ df -h
 
 ---
 
-## 1-6. `~/.bashrc` の説明（Optional）
+## 1-6. シェル設定ファイル（`~/.zshrc` / `~/.bashrc`）（Optional）
 
-`~/.bashrc` は，Bashシェル起動時に読み込まれるユーザー設定ファイルです．  
+シェル起動時に読み込まれるユーザー設定ファイルです．  
 エイリアス，環境変数，PATH追加などをここに書くと，毎回自動で反映されます．
+
+使い分け:
+
+- macOS標準（zsh）: `~/.zshrc`
+- Ubuntu/WSL標準（bash）: `~/.bashrc`
 
 基本操作:
 
 ```bash
 # 内容確認
-cat ~/.bashrc
+cat ~/.zshrc   # bashの場合は ~/.bashrc
 
 # 編集（好きなエディタでOK）
-code ~/.bashrc
+code ~/.zshrc  # bashの場合は ~/.bashrc
 
 # 変更を現在のシェルへ反映
-source ~/.bashrc
+source ~/.zshrc  # bashの場合は ~/.bashrc
 ```
 
 よく使う設定例:
@@ -300,5 +305,5 @@ export PATH="$HOME/.local/bin:$PATH"
 ポイント:
 
 - 設定を保存しただけでは現在のターミナルには反映されない
-- `source ~/.bashrc` を実行するか，ターミナルを再起動する
+- `source` で即時反映するか，ターミナルを再起動する
 - 文法ミスがあるとシェル起動時にエラーになるため，少しずつ追記して確認する

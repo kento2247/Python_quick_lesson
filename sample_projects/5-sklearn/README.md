@@ -9,6 +9,12 @@ cd sample_projects/5-sklearn
 uv run main.py --model random_forest --test-size 0.2 --seed 42
 ```
 
+別モデル例（ロジスティック回帰）:
+
+```bash
+uv run main.py --model logreg --test-size 0.2 --seed 42
+```
+
 ## このサンプルで確認できること
 
 - `argparse` でCLI引数を扱う
@@ -20,3 +26,4 @@ uv run main.py --model random_forest --test-size 0.2 --seed 42
 ## 出力
 
 実行後に `output/report.json` が生成されます．
+`--out-dir` を指定すると保存先を変更できます．
