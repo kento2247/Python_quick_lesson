@@ -1,0 +1,10 @@
+[project]
+name = "5-sklearn"
+version = "0.1.0"
+description = "scikit-learn classification sample for final goals"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "scikit-learn>=1.4.0",
+    "tqdm>=4.67.1",
+]

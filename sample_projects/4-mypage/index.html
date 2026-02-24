@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page Sample</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">Python Quick Lesson</p>
+      <h1>My Portfolio Page</h1>
+      <p class="lead">
+        VSCode + Git/GitHub + AI Coding を使って作る、最小ポートフォリオ。
+      </p>
+      <button id="theme-toggle" type="button">Theme Toggle</button>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>About</h2>
+        <p>
+          ここに自己紹介を入れます。研究テーマ、作っているもの、学習中の技術などを簡潔に書きます。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Skills</h2>
+        <ul class="chips">
+          <li>Python</li>
+          <li>Git/GitHub</li>
+          <li>VSCode</li>
+          <li>Linux CLI</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <article>
+            <h3>Data Summary</h3>
+            <p>PandasでCSVを集計するサンプル。</p>
+          </article>
+          <article>
+            <h3>Matrix Demo</h3>
+            <p>Numpyで配列計算を確認するサンプル。</p>
+          </article>
+          <article>
+            <h3>ML Classifier</h3>
+            <p>scikit-learnで分類器を実行するサンプル。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small id="last-updated"></small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
