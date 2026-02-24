@@ -14,4 +14,4 @@ Pythonはデータ分析，自動化，AI開発など幅広い用途で使われ
 - [2. Git / GitHub](./README_sections/02_git_github.md)
 - [3. VSCode設定](./README_sections/03_vscode_setup.md)
 - [4. Pythonインストール（uv使用）](./README_sections/04_python_uv.md)
-- [最終目標](./README_sections/05_final_goals.md)
+- [5. まとめ](./README_sections/05_final_goals.md)
