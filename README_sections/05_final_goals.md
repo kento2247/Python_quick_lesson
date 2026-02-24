@@ -16,23 +16,9 @@
    - `uv` で依存関係を管理し，`scikit-learn` 分類器を実行する
    - 実行結果を `output/report.json` に保存する
 
-## 5-2. 実践手順（4-mypage）
+### 例：4-mypage
 
-```bash
-cd sample_projects/4-mypage
-code .
-python3 -m http.server 8000
-```
-
-- ブラウザで `http://localhost:8000` を開いて表示確認
-- 編集後はGitでコミット:
-
-```bash
-git add .
-git commit -m "add mypage sample"
-```
-
-## 5-3. 実践手順（5-sklearn）
+### 例：5-sklearn
 
 ```bash
 cd sample_projects/5-sklearn
