@@ -22,28 +22,8 @@ Git/GitHubは，開発でよく起きる次の問題を解決します．
 
 ---
 
-## 2-2. Gitインストール
+## 2-2. Gitの設定
 
-Ubuntu / WSL:
-
-```bash
-sudo apt update
-sudo apt install git
-```
-
-macOS（Homebrew）:
-
-```bash
-brew install git
-```
-
-※ macOSにはGitが標準で入っている場合もありますが，古い版のことがあるため `git --version` で確認します．
-
-確認:
-
-```bash
-git --version
-```
 
 初期設定（最初に1回だけ）:
 
