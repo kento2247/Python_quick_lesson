@@ -130,7 +130,7 @@ tail -n 5 memo.txt
 1. `~/cli_practice` ディレクトリを作成し，そこへ移動する．
 
 ```bash
-mkdir -p ~/cli_practice
+mkdir ~/cli_practice
 cd ~/cli_practice
 ```
 
