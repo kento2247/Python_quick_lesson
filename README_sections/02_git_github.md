@@ -100,10 +100,10 @@ venv/
 - 初めて他者リポジトリを触るときの起点になる
 - `clone` 後は，履歴・ブランチ情報も含めてローカルで作業できる
 
-例（SSH）:
+例（）:
 
 ```bash
-git clone git@github.com:kento2247/Python_quick_lesson.git
+git clone https://github.com/kento2247/Python_quick_lesson.git
 cd Python_quick_lesson
 ```
 
