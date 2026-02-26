@@ -40,7 +40,6 @@ code --version
 ```bash
 code .                # 現在ディレクトリを開く
 code README.md        # 特定ファイルを開く
-code -r .             # 既存ウィンドウで開き直す
 ```
 
 ## 先ほどcloneしたプロジェクトをVSCodeで開いてみましょう．
