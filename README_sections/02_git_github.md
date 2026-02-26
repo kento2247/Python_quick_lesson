@@ -58,6 +58,7 @@ git config --global user.email "you@example.com"
 
 ```bash
 git init
+touch sample.txt
 git add .
 git commit -m "initial commit"
 ```
